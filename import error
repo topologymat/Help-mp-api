@@ -1,0 +1,44 @@
+ImportError                               Traceback (most recent call last)
+<ipython-input-3-e38d528d020d> in <module>
+----> 1 from mp_api.matproj import MPRester
+      2 mpr = MPRester('api key')
+      3 
+      4 no_band=[]
+      5 for i in range(39, len(k)):
+
+~\anaconda3\lib\site-packages\mp_api\__init__.py in <module>
+      4 from monty.serialization import loadfn
+      5 from pkg_resources import get_distribution, DistributionNotFound
+----> 6 from mp_api.client import MPRester
+      7 
+      8 try:
+
+~\anaconda3\lib\site-packages\mp_api\client.py in <module>
+     16 
+     17 from mp_api.core.client import BaseRester, MPRestError
+---> 18 from mp_api.routes.electronic_structure.models.core import BSPathType
+     19 from mp_api.routes import *
+     20 
+
+~\anaconda3\lib\site-packages\mp_api\routes\__init__.py in <module>
+     11 from mp_api.routes.elasticity.client import ElasticityRester
+     12 from mp_api.routes.thermo.client import ThermoRester
+---> 13 from mp_api.routes.dielectric.client import DielectricRester
+     14 from mp_api.routes.dois.client import DOIRester
+     15 from mp_api.routes.piezo.client import PiezoRester
+
+~\anaconda3\lib\site-packages\mp_api\routes\dielectric\client.py in <module>
+      3 
+      4 from mp_api.core.client import BaseRester
+----> 5 from mp_api.routes.dielectric.models import DielectricDoc
+      6 
+      7 
+
+~\anaconda3\lib\site-packages\mp_api\routes\dielectric\models.py in <module>
+      2 from monty.json import MontyDecoder
+      3 
+----> 4 from emmet.core.polar import Dielectric
+      5 
+      6 from pydantic import BaseModel, Field, validator
+
+ImportError: cannot import name 'Dielectric' from 'emmet.core.polar' (C:\Users\GT\anaconda3\lib\site-packages\emmet\core\polar.py)
